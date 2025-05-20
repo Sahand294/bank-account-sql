@@ -1,0 +1,54 @@
+.card {
+    border: 4px solid black;
+    justify-content: center !important;
+    align-content: center !important;
+    align-items: center !important;
+}
+input{
+    margin-bottom: 2px !important;
+    width: 100%;
+    height: 40px;
+}
+.two-input{
+    margin-bottom: 2px !important;
+    width: 100%;
+    height: 40px;
+}
+.btn {
+    margin-top: 20px;
+    /*margin-bottom: ;*/
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF !important;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.hidden {
+    display: none;
+}
+
+.boxs {
+    background: skyblue;
+    width: 100%;
+    min-width: 300px;
+    height: fit-content;
+    min-height: 100px;
+}
+
+.title {
+    color: black;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.desc {
+    font-weight: bold;
+}
