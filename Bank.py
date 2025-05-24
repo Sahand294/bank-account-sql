@@ -33,7 +33,7 @@ class Bank:
 bank1 = Bank()
 a = Authoritize.loging_in('roshs',180,interest_rate=100)
 b = Authoritize.loging_in('1391',200)
-b.review()
+b.withdraw(3,'1391')
 
 
 

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>history</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/history.css')}}">
+</head>
+<body>
+    <div class="trans">
+        {% if trans %}
+        {% for tran in trans %}
+        {{tran}}
+        <p></p>
+        {% endfor %}
+        {% endif %}
+    </div>
+    <a class="return" href="http://127.0.0.1:3000/display">back to home page</a>
+</body>
+</html>

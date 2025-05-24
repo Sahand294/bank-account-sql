@@ -28,15 +28,15 @@
                 {% else %}
                 {% endif %}
             </div>
-            <div class="col-md-3 card">
-                <h1 class="title">Password</h1>
-                {% if info %}
-                    <h3 class="desc">
-                        {{info['password']}}
-                    </h3>
-                {% else %}
-                {% endif %}
-            </div>
+<!--            <div class="col-md-3 card">-->
+<!--                <h1 class="title">Password</h1>-->
+<!--                {% if info %}-->
+<!--                    <h3 class="desc">-->
+<!--                        {{info['password']}}-->
+<!--                    </h3>-->
+<!--                {% else %}-->
+<!--                {% endif %}-->
+<!--            </div>-->
             <div class="col-md-3 card">
                 <h1 class="title">Balance</h1>
                 {% if info %}
@@ -46,7 +46,7 @@
                 {% else %}
                 {% endif %}
             </div>
-            <div class="col-md-12 card">
+            <div class="col-md-3 card">
                 <h1 class="title">Type</h1>
                 {% if info %}
                     <h3 class="desc">
@@ -72,12 +72,18 @@
                 <h1 class="title">Transfer</h1>
                 <a href="http://127.0.0.1:3000/transfer" class="btn">Transfer</a>
             </div>
-<!--            <div class="col-md-4 card">-->
-<!--                <h1 class="title">Deposit</h1>-->
-<!--                <a type="submit" class="btn">Deposit</a>-->
-<!--            </div>-->
+            <div class="col-md-12 card">
+                <h1 class="title">History</h1>
+                <a href="http://127.0.0.1:3000/history" class="btn">History</a>
+            </div>
 
         </div>
     </div>
+    <h1 class="error">
+        {% if info %}
+        {{info['error']}}
+        {% endif %}
+    </h1>
+
 </body>
 </html>

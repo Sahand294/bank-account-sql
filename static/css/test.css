@@ -4,6 +4,10 @@
     align-content: center !important;
     align-items: center !important;
 }
+.error{
+    font-size: 40px;
+    color:red;
+}
 input{
     margin-bottom: 2px !important;
     width: 100%;
