@@ -1,28 +1,8 @@
 {
     "accounts": [
         {
-            "id": 0,
+            "id": -1,
             "trans actions": []
-        },
-        {
-            "id": 180,
-            "trans actions": [
-                "has transfered 200 to the account 200 at 2025-05-24 16:52"
-            ]
-        },
-        {
-            "id": 200,
-            "trans actions": [
-                "has recieved 10 from the account 180 at 2025-05-24 10:01",
-                "has recieved 200 from the account 180 at 2025-05-24 16:52"
-            ]
-        },
-        {
-            "id": 500,
-            "trans actions": [
-                " has deposited 200.0$  balance:200 at 2025-05-24 16:55",
-                "has transfered 10 to the account 5000 at 2025-05-24 16:55"
-            ]
         }
     ]
 }

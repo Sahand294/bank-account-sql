@@ -115,6 +115,26 @@
       <button type="submit" class="btn">Transfer</button>
     </form>
   </div>
+<script>
+  // Allow only 2 digits after decimal
+  function limitDecimals(input) {
+    input.addEventListener('input', function () {
+      const match = this.value.match(/^\d*\.?\d{0,2}/);
+      if (match) {
+        this.value = match[0];
+      }
+    });
+  }
+
+  // Apply to relevant fields if they exist
+  const deposit = document.getElementById('deposit-money');
+  const withdraw = document.getElementById('withdraw-money');
+  const transfer = document.getElementById('transfer-money');
+
+  if (deposit) limitDecimals(deposit);
+  if (withdraw) limitDecimals(withdraw);
+  if (transfer) limitDecimals(transfer);
+</script>
 
 </body>
 </html>

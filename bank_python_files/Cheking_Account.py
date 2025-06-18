@@ -1,5 +1,5 @@
-from Bank_Account import BankAccount as Banks
-from  Filemanager import Filemanager
+from bank_python_files.Bank_Account import BankAccount as Banks
+from  bank_python_files.Filemanager import Filemanager
 class CheckingAccount(Banks):
     def __init__(self, account_holder, account_number, password, withdrawlimit,type):
         self.total_Review = {'owner': account_holder, 'id': account_number, 'balance': 0.0, 'type': 'checking',

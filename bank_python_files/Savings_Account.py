@@ -1,5 +1,5 @@
-from Bank_Account import BankAccount as Banks
-from Filemanager import Filemanager as balance
+from bank_python_files.Bank_Account import BankAccount as Banks
+from bank_python_files.Filemanager import Filemanager as balance
 
 class SavingsAccount(Banks):
     def __init__(self, bank_holder, account_Number, password, intrest_Rate,type):

@@ -1,7 +1,18 @@
+import sys
+import os
+
+if getattr(sys, 'frozen', False):
+    base_path = sys._MEIPASS
+else:
+    base_path = os.path.abspath(".")
+
+template_folder = os.path.join(base_path, 'templates')
+static_folder = os.path.join(base_path, 'static')
+
 from flask import Flask,render_template,session,request,redirect,url_for
 from prostgresssql.total import DataBase
-from Filemanager import Filemanager
-from Bank_Account import BankAccount
+from bank_python_files.Filemanager import Filemanager
+from bank_python_files.Bank_Account import BankAccount
 import json
 
 def information(id):
@@ -24,7 +35,7 @@ def wrong(info):
     info['owner'] = 'invalid password'
     info['balance'] = 'invalid password'
     info['type'] = 'invalid password'
-app = Flask(__name__)
+app = Flask(__name__, template_folder=template_folder, static_folder=static_folder)
 app.secret_key = "hi"
 signin = False
 @app.route('/deposit', methods=['GET', 'POST'])
@@ -92,7 +103,7 @@ def deposit():
     money = 0
     if 'deposit-money' in session:
         money = session.get('deposit-money')
-    Filemanager.changing_it('balance',int(session.get('id')),int(money))
+    Filemanager.changing_it('balance',int(session.get('id')),float(money))
     # DataBase.update('the_entire_thing','balance',)
 def withdraw():
     money = 0
@@ -114,7 +125,7 @@ def home():
     if "id" in session:
         info = information(session.get('id'))
         if info['password'] != session.get('password'):
-            wrong(info)
+            return render_template('incorrect.html')
     if 'error' in session:
         info['error'] = session.get('error')
     return render_template("test.html",info=info)
@@ -140,7 +151,7 @@ def login():
     return render_template("login.html")
 
 def trans():
-    with open('transactions.json','r') as file:
+    with open('transactions.json', 'r') as file:
         text = json.load(file)
         for i in text['accounts']:
             if int(i['id']) == int(session.get('id')):

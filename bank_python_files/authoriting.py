@@ -1,6 +1,6 @@
-from Cheking_Account import CheckingAccount
-from Savings_Account import SavingsAccount
-from Normall_Account import NormalAccount
+from bank_python_files.Cheking_Account import CheckingAccount
+from bank_python_files.Savings_Account import SavingsAccount
+from bank_python_files.Normall_Account import NormalAccount
 from prostgresssql.total import DataBase
 c = CheckingAccount
 n = NormalAccount

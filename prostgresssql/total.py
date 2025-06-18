@@ -38,5 +38,4 @@ class DataBase:
     @staticmethod
     def update(table:str,column:str,new_value:str,condition:str):
         Update(table, column, new_value, condition)
-
 #DataBase.create('the_entire_thing','id int primary key,owner VARCHAR(999999),password  VARCHAR(9998) UNIQUE,balance INT,type VARCHAR(99999)')

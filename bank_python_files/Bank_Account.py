@@ -1,7 +1,7 @@
-from adding_accounts import Adding_Accounts
+from bank_python_files.adding_accounts import Adding_Accounts
 from abc import abstractmethod
 adding_accounts = Adding_Accounts()
-from Filemanager import Filemanager
+from bank_python_files.Filemanager import Filemanager
 from prostgresssql.total import DataBase
 balances = Filemanager()
 

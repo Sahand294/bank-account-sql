@@ -1,7 +1,7 @@
-from Normall_Account import NormalAccount
-from Savings_Account import SavingsAccount
-from Cheking_Account import CheckingAccount
-from authoriting import Authoritize
+from bank_python_files.Normall_Account import NormalAccount
+from bank_python_files.Savings_Account import SavingsAccount
+from bank_python_files.Cheking_Account import CheckingAccount
+from bank_python_files.authoriting import Authoritize
 
 
 class Bank:
